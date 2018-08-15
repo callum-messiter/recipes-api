@@ -23,11 +23,10 @@ router.get('/recipe/list', (req, res, next) => {
 
 /**
  * @api {get} /recipe/:recipeId Get
- * @apiGroup Get
+ * @apiGroup Recipe
  * @apiVersion 1.0.0
  * @apiName Get
  * @apiDescription This endpoint should be used for retrieving the details of a specific recipe.
- * using the below query parameters. If no query parameters are provided, all available recipes will be returned in the response object.
  * @apiSuccessExample {json} Success-Response (200): 
  * {
  *     "name": String,
@@ -38,7 +37,7 @@ router.get('/recipe/list', (req, res, next) => {
  * @apiErrorExample recipeNotFound (404): 
  * {  
  *     "error": "recipeNotFound",
- *     "msg": "Sorry, this recipe doesn't exist or may have been removed
+ *     "msg": "Sorry, this recipe doesn't exist or may have been removed"
  * }
  */
 router.get('/recipe/:recipeId', (req, res, next) => {

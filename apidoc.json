@@ -1,0 +1,11 @@
+{
+	"name": "Recipes API (SubSec)",
+	"version": "1.0.0",
+	"description": "The Recipes API (SubSec tech test) ",
+	"url" : "http://localhost:3000",
+	"sampleUrl" : "/api",
+	"title": "Recipes API V1.0",
+	"template": {
+		"forceLanguage": "en"
+	}
+}
