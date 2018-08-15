@@ -22,27 +22,4 @@ router.get('/recipe/list', (req, res, next) => {
 	RecipeController.list(req, res, next);
 });
 
-/**
- * @api {get} /recipe/:recipeId Get
- * @apiGroup Recipe
- * @apiVersion 1.0.0
- * @apiName Get
- * @apiDescription This endpoint should be used for retrieving the details of a specific recipe.
- * @apiSuccessExample {json} Success-Response (200): 
- * {
- *     "name": String,
- *     "imageUrl": String,
- *     "ingredients": String[],
- *     "cookingTime": String
- * }
- * @apiErrorExample recipeNotFound (404): 
- * {  
- *     "error": "recipeNotFound",
- *     "msg": "Sorry, this recipe doesn't exist or may have been removed"
- * }
- */
-router.get('/recipe/:recipeId', (req, res, next) => {
-	RecipeController.get(req, res, next);
-});
-
 module.exports = router;
