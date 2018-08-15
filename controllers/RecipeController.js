@@ -1,5 +1,7 @@
+const recipes = require('../data/recipes');
+
 const list = (req, res, next) => {
-	res.json( { endpoint: 'list'} );
+	res.json( { endpoint: recipes} );
 }
 
-module.exports = { list, get };
+module.exports = { list };

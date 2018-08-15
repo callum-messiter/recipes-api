@@ -1,41 +1,6 @@
 define({ "api": [
   {
     "type": "get",
-    "url": "/recipe/:recipeId",
-    "title": "Get",
-    "group": "Recipe",
-    "version": "1.0.0",
-    "name": "Get",
-    "description": "<p>This endpoint should be used for retrieving the details of a specific recipe.</p>",
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response (200): ",
-          "content": "{\n    \"name\": String,\n    \"imageUrl\": String,\n    \"ingredients\": String[],\n    \"cookingTime\": String\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "examples": [
-        {
-          "title": "recipeNotFound (404): ",
-          "content": "{  \n    \"error\": \"recipeNotFound\",\n    \"msg\": \"Sorry, this recipe doesn't exist or may have been removed\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "filename": "router/RecipeRouter.js",
-    "groupTitle": "Recipe",
-    "groupDescription": "<p>Used by clients to retrieve recipe data</p>",
-    "sampleRequest": [
-      {
-        "url": "/api/recipe/:recipeId"
-      }
-    ]
-  },
-  {
-    "type": "get",
     "url": "/recipe/list",
     "title": "List",
     "group": "Recipe",
