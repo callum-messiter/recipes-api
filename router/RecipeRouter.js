@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const RecipeController = require('../controllers/RecipeController');
 
 /**
  * @apiDefine Recipe Recipe
@@ -18,7 +19,7 @@ const router = require('express').Router();
  * Recipe[]
  */
 router.get('/recipe/list', (req, res, next) => {
-	res.json({ success: true });
+	RecipeController.list(req, res, next);
 });
 
 /**
@@ -41,7 +42,7 @@ router.get('/recipe/list', (req, res, next) => {
  * }
  */
 router.get('/recipe/:recipeId', (req, res, next) => {
-	res.json({ success: true });
+	RecipeController.get(req, res, next);
 });
 
 module.exports = router;
