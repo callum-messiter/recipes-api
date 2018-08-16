@@ -28,12 +28,4 @@ router.get('/recipe/list', (req, res, next) => {
 	RecipeController.list(req, res, next);
 });
 
-/* 
-	A endpoint for retrieving a specific recipe would be useful. A SPA may make use of this
-	on a "recipe" screen, for example, which would show the details of a specific recipe. 
-	This functionality would require each recipe object to have a unique `id` property, 
-	so that it can be referenced in the route, e.g. '/recipe/:recipeId'. Using the recipe name 
-	as a unique identifier would be sub-optimal.
-*/
-
 module.exports = router;

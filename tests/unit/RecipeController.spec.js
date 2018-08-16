@@ -2,6 +2,7 @@ const chai = require('chai');
 const should = chai.should();
 const RecipeController = require('../../controllers/RecipeController');
 
+/* `mocha --recursive tests` */
 describe('RecipeController.isInString', () => {
 	context('when string does contain substring', () => {
 		it('should return the boolean true', () => {
