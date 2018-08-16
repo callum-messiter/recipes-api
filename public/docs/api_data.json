@@ -29,6 +29,15 @@
         }
       ]
     },
+    "error": {
+      "examples": [
+        {
+          "title": "malformedJson (500):",
+          "content": "{\n    \"err\": \"malformedJson\",\n    \"msg\": \"The `filters` param must be a valid stringified JSON object.\",\n    \"statusCode\": 500\n}",
+          "type": "json"
+        }
+      ]
+    },
     "filename": "router/RecipeRouter.js",
     "groupTitle": "Recipe",
     "groupDescription": "<p>Used by clients to retrieve recipe data</p>",

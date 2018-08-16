@@ -17,6 +17,12 @@ const RecipeController = require('../controllers/RecipeController');
  * the value represents the filter to be applied to the list of recipes, e.g. "Lemon"
  * @apiSuccessExample {json} Success-Response (200): 
  * Recipe[]
+ * @apiErrorExample malformedJson (500):
+ * {
+ *     "err": "malformedJson",
+ *     "msg": "The `filters` param must be a valid stringified JSON object.",
+ *     "statusCode": 500
+ * }
  */
 router.get('/recipe/list', (req, res, next) => {
 	RecipeController.list(req, res, next);
