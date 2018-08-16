@@ -1,0 +1,31 @@
+{
+  "name": "recipes-api",
+  "version": "1.0.0",
+  "description": "All in all a fun task. I tried to balance two things: 1) keeping the structure fairly simple, since this was such a small application, 2) Writing it to be \r maintainable, as if it would grow. Hopefully there isn't too much unecessary abstraction.",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha --recursive tests",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callum-messiter/recipes-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/callum-messiter/recipes-api/issues"
+  },
+  "homepage": "https://github.com/callum-messiter/recipes-api#readme"
+}

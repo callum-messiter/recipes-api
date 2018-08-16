@@ -65,13 +65,13 @@ Maybe we could build this one together!
 
 ## How To Run
 
-`node server`
+`npm start`
 
 
 ### With Tests (optional)
 
-- `mocha --recursive tests`
-- `node server`
+- `npm test`
+- `npm start`
 
 
 ## Calling Endpoints
