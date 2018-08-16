@@ -22,7 +22,7 @@ maintainable, as if it would grow. Hopefully there isn't too much unecessary abs
 
 *Data*:
 
-- Recipe data - array serving as mocka data
+- Recipe data - array serving as mock data
 
 
 *Model*:
@@ -32,7 +32,7 @@ maintainable, as if it would grow. Hopefully there isn't too much unecessary abs
 
 *Middleware*
 
-- Error handler function registered on all routes. If error occurs in Controller, Controller passes controll to the error handler, and the error is returned
+- Error handler function registered on all routes. If error occurs in Controller, Controller passes control to the error handler, and the error is returned
 
 ### Thoughts
 
@@ -44,31 +44,33 @@ Going forward, this might be harder to manage, and maybe the endpoint could be b
 
 Regarding the actual filtering functionality, there may also be more performant ways of doing it.
 
-Finally, I choose not to return the "not found" error given in the specs. My thinking was that if the client requests a list of arrays,
+Finally, I chose not to return the "not found" error given in the specs. My thinking was that if the client requests a list of arrays,
 and none are avaiable, or none match the provided filters, the API should return a 200 response code with an empty array (because
 the request was successfully fulfilled). The client is then in charge of informing the user that the result set is empty.
 
 ### ToDO
 
-A endpoint for retrieving a specific recipe would be useful. A SPA may make use of this on a "recipe" screen, for example, 
+An endpoint for retrieving a specific recipe would be useful. A SPA may make use of this on a "recipe" screen, for example, 
 which would show the details of a specific recipe. This functionality would require each recipe object to have a unique `id` property, 
 so that it can be referenced in the route, e.g. '/recipe/:recipeId'. Using the recipe name as a unique identifier would be sub-optimal.
+
+Maybe we could build this one together!
 
 ## Dependencies
 
 - NPM >= v5.2.0
 - Node >= v8.9.3
 - Mocha (optional): `npm install -g mocha`
+- Install app dependencies: `npm install`
 
 ## How To Run
 
-From the project's root dir: `node server`
+`node server`
 
 
 ### With Tests (optional)
 
 `mocha --recursive tests`
-
 `node server`
 
 
