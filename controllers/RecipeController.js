@@ -82,7 +82,8 @@ const doesAnyIngredientPassFilter = (ingredients, filter) => {
 }
 
 const isInString = (name, filter) => {
-	name = name.toLowerCase(), filter = filter.toLowerCase();
+	name = name.toString().toLowerCase();
+	filter = filter.toString().toLowerCase();
 	return name.indexOf(filter) >= 0;
 }
 
@@ -99,4 +100,11 @@ const buildRecipeArray = (recipeData) => {
 	return recipes;
 }
 
-module.exports = { list };
+module.exports = { 
+	list, 
+	filterRecipes, 
+	recipePassesAllFilters, 
+	doesAnyIngredientPassFilter, 
+	isInString, 
+	buildRecipeArray
+};
