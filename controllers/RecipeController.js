@@ -1,5 +1,6 @@
 const recipeData = require('../data/recipes');
 const Recipe = require('../models/RecipeModel');
+const e = require('../middleware/Error').list;
 
 const list = (req, res, next) => {
 	if(req.query.filters) {
@@ -9,11 +10,8 @@ const list = (req, res, next) => {
 			const filteredRecipes = filterRecipes(recipeData, filters);
 			const recipesResponse = buildRecipeArray(filteredRecipes);
 			return res.status(200).json(recipesResponse);
-		} catch(e) {
-			return res.status(500).json({
-				error: 'malformedReqParam', 
-				msg: 'The `filters` param must be a valid stringified JSON object.' 
-			});
+		} catch(err) {
+			return next(e.malformedJson);
 		}
 	}
 
