@@ -48,7 +48,7 @@ Finally, I chose not to return the "not found" error given in the specs. My thin
 and none are avaiable, or none match the provided filters, the API should return a 200 response code with an empty array (because
 the request was successfully fulfilled). The client is then in charge of informing the user that the result set is empty.
 
-### ToDO
+### ToDo
 
 An endpoint for retrieving a specific recipe would be useful. A SPA may make use of this on a "recipe" screen, for example, 
 which would show the details of a specific recipe. This functionality would require each recipe object to have a unique `id` property, 
@@ -70,8 +70,8 @@ Maybe we could build this one together!
 
 ### With Tests (optional)
 
-`mocha --recursive tests`
-`node server`
+- `mocha --recursive tests`
+- `node server`
 
 
 ## Calling Endpoints
