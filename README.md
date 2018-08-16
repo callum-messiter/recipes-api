@@ -78,8 +78,8 @@ Maybe we could build this one together!
 
 - Postman
 
-E.g. `GET http://localhost:3000/recipe/list?filters={"name":"beef"}`
+E.g. `GET http://localhost:3000/recipe/list?name=beef`
 
 - Browser
 
-E.g. `http://localhost:3000/recipe/list?filters={"name":"chicken", "ingredients": "chicken"}`
+E.g. `http://localhost:3000/recipe/list?name=chicken&ingredients=chicken`
