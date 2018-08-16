@@ -11,11 +11,6 @@ const handler = (err, req, res, next) => {
 }
 
 const list = {
-	malformedJson: {
-		err: 'malformedJson',
-		msg: 'The `filters` param must be a valid stringified JSON object.',
-		statusCode: 500
-	},
 	internalServerError: {
 		err: 'internalServerError',
 		msg: 'An unanticipated server error occurred.',

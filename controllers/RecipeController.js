@@ -1,19 +1,13 @@
 const recipeData = require('../data/recipes');
 const Recipe = require('../models/RecipeModel');
-const e = require('../middleware/Error').list;
 const _ = require('underscore');
 
 /* Main controller function */
 const list = (req, res, next) => {
 	if(_.size(req.query) > 0) {
-		/* Check param is stringified JSON object; if so, filter recipes */
-		try {
-			const filteredRecipes = filterRecipes(recipeData, req.query);
-			const recipesResponse = buildRecipeArray(filteredRecipes);
-			return res.status(200).json(recipesResponse);
-		} catch(err) {
-			return next(e.malformedJson); /* Error handler middlware will deal with this */
-		}
+		const filteredRecipes = filterRecipes(recipeData, req.query);
+		const recipesResponse = buildRecipeArray(filteredRecipes);
+		return res.status(200).json(recipesResponse);
 	}
 
 	/* If request contains no filter params, return all recipes */

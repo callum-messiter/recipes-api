@@ -17,12 +17,6 @@ const RecipeController = require('../controllers/RecipeController');
  * applied to the recipes
  * @apiSuccessExample {json} Success-Response (200): 
  * Recipe[]
- * @apiErrorExample malformedJson (500):
- * {
- *     "err": "malformedJson",
- *     "msg": "The `filters` param must be a valid stringified JSON object.",
- *     "statusCode": 500
- * }
  */
 router.get('/recipe/list', (req, res, next) => {
 	RecipeController.list(req, res, next);
